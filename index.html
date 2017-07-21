@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<script src="js/jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<title></title>
+		<style type="text/css">
+			.kong{
+				width: 326px;
+				height: 400px;
+				background: rgba(0,0,0,0.6);
+				border: 1px solid black;
+			}
+			.kong div{
+				margin-left:23px ;
+			}
+			select{
+				width: 280px;
+				height: 40px;
+			}
+			.biao{
+				font-size: 16px;
+				margin-top: 30px;
+				color: white;
+			}
+			.je{
+				margin-top: 20px;
+			}
+			.je p{
+				width: 280px;
+				height: 12px;
+				margin-top: 2px;
+				margin-bottom: 10px;
+				color: white;
+				font-size: 12px;
+				
+			}
+			.je p span:nth-child(1){
+				float: left;
+			}
+			.je p span:nth-child(2){
+				float: right;
+			}
+			.dkje:after{
+				display: block;
+				clear: both;
+				content: "";
+			}
+			.qx p{
+				line-height: 30px;
+				font-size: 12px;
+				color: white;
+			}
+			.ss input{
+				width: 280px;
+				height: 40px;
+				background: blue;
+				color: white;
+				font-size: 14px;
+				margin-top: 20px;
+			}
+			.di{
+				text-align: center;
+				color: silver;
+				margin-top: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="kong">
+			<div class="biao">
+				<h2>快速搜索消费贷款</h2>
+			</div>
+			<div class="je">
+				<p class="dkje"><span>贷款金额:</span><span>不足一万可用小数点表示</span></p>
+				<select name="">
+					<option value="">5万元</option>
+					<option value="">10万元</option>
+					<option value="">15万元</option>
+					<option value="">20万元</option>
+					<option value="">25万元</option>
+					<option value="">30万元</option>
+				</select>
+			</div>
+			<div class="qx">
+				<p><span>贷款期限:</span></p>
+				<select name="">
+					<option value="">6个月</option>
+					<option value="">18个月</option>
+					<option value="">1年</option>
+					<option value="">2年</option>
+					<option value="">3年</option>
+					<option value="">5年</option>
+					<option value="">10年</option>
+				</select>
+			</div>
+			<div class="ss">
+				<input type="button" value="搜索一下" />
+			</div>
+			<p class="di">9164中信贷产品 2000家银行 1403家小贷公司</p>
+		</div>
+		
+	</body>
+
+</html>

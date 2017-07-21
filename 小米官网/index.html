@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery-1.7.2.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+	</head>
+	<style type="text/css">
+		.box{				
+				position:relative;
+			}
+		.imgBox{
+				width:800px; 
+				height:450px; 				
+				position: absolute;
+				left: 200px;
+				top: 0;
+				display:none;
+				
+			}
+		.imgBox img{
+				width:800px; 
+				height:450px;
+		}	
+		.num .active{background:#E4393C;}
+	</style>
+	<body>
+		<div id="tou">
+			<img src="img/dh.jpg" />
+		</div>
+		<div id="daoh">
+			<div id="daoh-ul" class="ul">
+				<ul class="ul">
+					<li>小米商城</li>
+					<li>小米</li>
+					<li>小米商城</li>
+					<li>小米</li>
+					<li>小米商城</li>
+					<li>小米商</li>
+					<li>小米商城</li>
+					<li>小城</li>
+					<li>小米商城</li>
+					<li>米城</li>
+				</ul>
+				<ul class="ul">
+					<li>登录</li>
+					<li>注册</li>
+					<li>消息通知</li>
+					<li><span><img src="img/gwc.jpg" /></span>购物车(0)</li>
+				</ul>
+			</div>
+		</div>
+		<div id="biao">
+			<div id="biao-div">
+				<img src="img/mi.jpg" />
+				<img src="img/sj.jpg" />
+				<ul>
+					<li>小米手机</li>
+					<li>红米</li>
+					<li>平板·笔记本</li>
+					<li>电视</li>
+					<li>盒子 ·影音</li>
+					<li>路由器</li>
+					<li>智能硬件</li>
+					<li>服务</li>
+					<li>社区</li>
+				</ul>
+				<input type="text" placeholder="第十艘阿胶覅是否" />
+			</div>
+		</div>
+		<div id="sjdhk">
+			<div id="sjdhk-div" class="box">
+				<ul class="num" id="num">
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+					<li>
+						<span>手机电话卡</span>
+						<span>></span>
+						<div class="imgBox">
+    						<a href="javascript:;"  ></a>
+   	 					</div>
+					</li>
+				</ul>
+				
+				<div id="sjdhk-div-div">
+					<img src="img/lunb.jpg" />
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oNum=document.getElementById('num');
+				var aLi=oNum.getElementsByTagName('li');
+				var oA=document.getElementsByClassName('imgBox');
+				for(var i=0;i<aLi.length;i++){
+					aLi[i].index=i;
+					aLi[i].onmouseover=function(){
+						for(var i=0;i<aLi.length;i++){
+							aLi[i].className='';	
+						}
+						this.className='active';
+						this.style.background = "red"
+						oA[this.index].innerHTML='<img src="img/pic'+(this.index+1)+'.jpg" alt="">';		
+						oA[this.index].style.display = "block";
+						
+					};
+					aLi[i].onmouseout=function(){
+						aLi[this.index].style.background = "black";
+						oA[this.index].style.display = "none";
+					};
+					
+				}
+
+			}
+		</script>
+		<div id="xtb">
+			<div id="xtb-div">
+				<div id="xtb-div-div">
+					<ul>
+						<li><img src="img/xgsj.jpg" /><br />选制手机</li>
+						<li><img src="img/xgsj.jpg" /><br />选制手机</li>
+						<li><img src="img/xgsj.jpg" /><br />选制手机</li>
+						<li><img src="img/xgsj.jpg" /><br />选制手机</li>
+						<li><img src="img/xgsj.jpg" /><br />选制手机</li>
+						<li><img src="img/xgsj.jpg" /><br />选制手机</li>
+					</ul>
+				</div>
+				<ul>
+					<li><img src="img/xm5c.jpg" /></li>
+					<li><img src="img/xm5c.jpg" /></li>
+					<li><img src="img/xm5c.jpg" /></li>
+				</ul>
+			</div>
+		</div>
+		<div id="mxdp">
+			<div id="mxdp-div">
+				<h3>小米明星单品</h3>
+				<ul>
+					<li>
+						<img src="img/mitu.jpg" />
+						<p>红米Note 4X</p>
+						<p>4100mAh超长续航，多彩金属</p>
+						<p>999元起</p>
+					</li>
+					<li>
+						<img src="img/mitu.jpg" />
+						<p>红米Note 4X</p>
+						<p>4100mAh超长续航，多彩金属</p>
+						<p>999元起</p>
+					</li>
+					<li>
+						<img src="img/mitu.jpg" />
+						<p>红米Note 4X</p>
+						<p>4100mAh超长续航，多彩金属</p>
+						<p>999元起</p>
+					</li>
+					<li>
+						<img src="img/mitu.jpg" />
+						<p>红米Note 4X</p>
+						<p>4100mAh超长续航，多彩金属</p>
+						<p>999元起</p>
+					</li>
+					<li>
+						<img src="img/mitu.jpg" />
+						<p>红米Note 4X</p>
+						<p>4100mAh超长续航，多彩金属</p>
+						<p>999元起</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="gg">
+			<div id="gg-div">
+				<div class="gg-biao">
+					<h3>家电</h3>
+					<ul>
+						<li>热门</li>
+						<li>电视影音</li>
+						<li>电脑</li>
+						<li>家具</li>
+					</ul>
+				</div>
+				<div class="gg-div-jd">
+					<div id="jd">
+						<img src="img/01.jpg" />
+					</div>
+					<ul>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<div class="yi">
+								<div>
+									<p>米家扫地机</p>
+									<p>1699元</p>
+								</div>
+								<img src="img/03.jpg" />
+							</div>
+							<div class="er">
+								<div>
+									<p>浏览更多</p>
+									<p>热门</p>
+								</div>
+								<img src="img/04.jpg" />
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="gg-biao">
+					<h3>家电</h3>
+					<ul>
+						<li>热门</li>
+						<li>电视影音</li>
+						<li>电脑</li>
+						<li>家具</li>
+					</ul>
+				</div>
+				<div class="gg-div-jd">
+					<div class="gg-jd-div">
+						<ul>
+							<li><img src="img/05.jpg" /></li>
+							<li><img src="img/06.jpg" /></li>
+						</ul>
+					</div>
+					<ul>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<div class="yi">
+								<div>
+									<p>米家扫地机</p>
+									<p>1699元</p>
+								</div>
+								<img src="img/03.jpg" />
+							</div>
+							<div class="er">
+								<div>
+									<p>浏览更多</p>
+									<p>热门</p>
+								</div>
+								<img src="img/04.jpg" />
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="gg-biao">
+					<h3>家电</h3>
+					<ul>
+						<li>热门</li>
+						<li>电视影音</li>
+						<li>电脑</li>
+						<li>家具</li>
+					</ul>
+				</div>
+				<div class="gg-div-jd">
+					<div class="gg-jd-div">
+						<ul>
+							<li><img src="img/05.jpg" /></li>
+							<li><img src="img/06.jpg" /></li>
+						</ul>
+					</div>
+					<ul>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<div class="yi">
+								<div>
+									<p>米家扫地机</p>
+									<p>1699元</p>
+								</div>
+								<img src="img/03.jpg" />
+							</div>
+							<div class="er">
+								<div>
+									<p>浏览更多</p>
+									<p>热门</p>
+								</div>
+								<img src="img/04.jpg" />
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="gg-biao">
+					<h3>家电</h3>
+					<ul>
+						<li>热门</li>
+						<li>电视影音</li>
+						<li>电脑</li>
+						<li>家具</li>
+					</ul>
+				</div>
+				<div class="gg-div-jd">
+					<div class="gg-jd-div">
+						<ul>
+							<li><img src="img/05.jpg" /></li>
+							<li><img src="img/06.jpg" /></li>
+						</ul>
+					</div>
+					<ul>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<span>享九折</span><br />
+							<img src="img/02.jpg" />
+							<p>小米电视机4A 49英寸</p>
+							<p>7.1-7.31直降300</p>
+							<p>2299元</p>
+						</li>
+						<li>
+							<div class="yi">
+								<div>
+									<p>米家扫地机</p>
+									<p>1699元</p>
+								</div>
+								<img src="img/03.jpg" />
+							</div>
+							<div class="er">
+								<div>
+									<p>浏览更多</p>
+									<p>热门</p>
+								</div>
+								<img src="img/04.jpg" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="wntj">
+			<div id="wntj-div">
+				<div id="wntj-div-b">
+					<h3>为你推荐</h3>
+					<div>
+						<input type="button" value="<" id="left"/>
+						<input type="button" value=">" id="right"/>
+					</div>
+				</div>
+				<div id="wntj-div-u">
+					<ul id="wntj-div-u-ul">
+						<li>
+							<img src="img/sb.jpg"/>
+							<p>Amazfit运动手表</p>
+							<p>799元</p>
+							<p>5644人好评</p>
+						</li>
+						<li>
+							<img src="img/sb.jpg"/>
+							<p>Amazfit运动手表</p>
+							<p>799元</p>
+							<p>5644人好评</p>
+						</li>
+						<li>
+							<img src="img/sb.jpg"/>
+							<p>Amazfit运动手表</p>
+							<p>799元</p>
+							<p>5644人好评</p>
+						</li>
+						<li>
+							<img src="img/sb.jpg"/>
+							<p>Amazfit运动手表</p>
+							<p>799元</p>
+							<p>5644人好评</p>
+						</li>
+						<li>
+							<img src="img/sb.jpg"/>
+							<p>Amazfit运动手表</p>
+							<p>799元</p>
+							<p>5644人好评</p>
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				var oBox=document.getElementById('wntj-div-u');
+				var oUl=document.getElementById('wntj-div-u-ul');
+				var aL=oUl.children;
+				var oL=document.getElementById('left');
+				var oR=document.getElementById('right');
+				oUl.innerHTML+=oUl.innerHTML;
+				$("#wntj-div-u-ul>li").eq(10).remove()
+				oUl.style.width=aL[0].offsetWidth*aL.length+'px';
+				var n=0;
+				var timer=null;
+				oL.onclick=function(){
+					toL();	
+				};
+				function toL(){
+				 		 n-= oUl.offsetWidth/2;
+				  		if(n<-oUl.offsetWidth/2){
+							n=0;  
+						  }
+						  oUl.style.left=n+'px';
+				};
+				toL()
+				oR.onclick=function(){
+						  n += oUl.offsetWidth/2;
+						  if(n>0){
+							n =- oUl.offsetWidth/2;  
+						  }
+						  oUl.style.left=n+'px';
+				};
+			};
+		</script>
+			<div id="rpcp">
+			<div id="rpcp-div">
+				<div id="rpcp-div-b">
+					<h3>热评产品</h3>
+				</div>
+				<div id="rpcp-div-u">
+					<ul>
+						<li>
+							<img src="img/08.jpg"/>
+							<span>超级喜欢！小巧玲珑！音质完美！不知道为什么！只要是小米出的东西我都喜欢！难道是因为那一句？？小米为发…</span>
+							<p>来自于甜蜜的评价</p>
+							<p><span>小米随身蓝牙音箱 | </span><span>69元</span></p>
+						</li>
+						<li>
+							<img src="img/09.jpg"/>
+							<span>这箱子很好，外观漂亮，实用性强。很轻，有点软但不影响它的坚固</span>
+							<p>来自于子书雁的评价</p>
+							<p><span>90分旅行箱20寸 | </span><span>299元</span></p>
+						</li>
+						<li>
+							<img src="img/08.jpg"/>
+							<span>超级喜欢！小巧玲珑！音质完美！不知道为什么！只要是小米出的东西我都喜欢！难道是因为那一句？？小米为发…</span>
+							<p>来自于甜蜜的评价</p>
+							<p><span>小米随身蓝牙音箱 | </span><span>69元</span></p>
+						</li>
+						<li>
+							<img src="img/09.jpg"/>
+							<span>这箱子很好，外观漂亮，实用性强。很轻，有点软但不影响它的坚固</span>
+							<p>来自于子书雁的评价</p>
+							<p><span>90分旅行箱20寸 | </span><span>299元</span></p>
+						</li>					
+					</ul>
+				</div>
+			</div>
+		</div>	
+		<div class="main6">
+			<div class="clearfix m6">
+				<h2>内容</h2>
+				<div>
+					<p>图书</p>
+					<p>哈利波特与被诅咒的孩子</p>
+					<p>哈利波特第八个古树中文版</p>
+					<p>29.37元</p>
+					<img src="img/10.jpg" />
+					<div class="dian">
+						<div class="dian1"></div>
+						<div class="dian2"></div>
+						<div class="dian3"></div>
+					</div>
+				</div>
+				<div>
+					<p>图书</p>
+					<p>哈利波特与被诅咒的孩子</p>
+					<p>哈利波特第八个古树中文版</p>
+					<p>29.37元</p>
+					<img src="img/10.jpg" />
+					<div class="dian">
+						<div class="dian1"></div>
+						<div class="dian2"></div>
+						<div class="dian3"></div>
+					</div>
+				</div>
+				<div>
+					<p>图书</p>
+					<p>哈利波特与被诅咒的孩子</p>
+					<p>哈利波特第八个古树中文版</p>
+					<p>29.37元</p>
+					<img src="img/10.jpg" />
+					<div class="dian">
+						<div class="dian1"></div>
+						<div class="dian2"></div>
+						<div class="dian3"></div>
+					</div>
+				</div>
+				<div>
+					<p>图书</p>
+					<p>哈利波特与被诅咒的孩子</p>
+					<p>哈利波特第八个古树中文版</p>
+					<p>29.37元</p>
+					<img src="img/10.jpg" />
+					<div class="dian clearfix">
+						<div class="dian1"></div>
+						<div class="dian2"></div>
+						<div class="dian3"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--视频-->
+		<div class="main7">
+			<div class="clearfix m7">
+				<h2>视频</h2>
+				<div>
+					<img src="img/11.jpg" />
+					<p>听雷总讲述小米7年工艺探索之旅</p>
+					<p>小米6,7年工艺的巅峰之作</p>
+				</div>
+				<div>
+					<img src="img/11.jpg" />
+					<p>听雷总讲述小米7年工艺探索之旅</p>
+					<p>小米6,7年工艺的巅峰之作</p>
+				</div>
+				<div>
+					<img src="img/11.jpg" />
+					<p>听雷总讲述小米7年工艺探索之旅</p>
+					<p>小米6,7年工艺的巅峰之作</p>
+				</div>
+				<div>
+					<img src="img/11.jpg" />
+					<p>听雷总讲述小米7年工艺探索之旅</p>
+					<p>小米6,7年工艺的巅峰之作</p>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="bottom">
+			<div class="b1">
+				<div class="b2 clearfix">
+					<div class="b3">
+						<img src="img/13.jpg" />
+						<p>预约维修服务</p>
+					</div>
+					<div class="b3">
+						<img src="img/13.jpg" />
+						<p>预约维修服务</p>
+					</div>
+					<div class="b3">
+						<img src="img/13.jpg" />
+						<p>预约维修服务</p>
+					</div>
+					<div class="b3">
+						<img src="img/13.jpg" />
+						<p>预约维修服务</p>
+					</div>
+					<div class="b3" style="border: none;">
+						<img src="img/13.jpg" />
+						<p>预约维修服务</p>
+					</div>
+				</div>
+				<div class="b4">
+					<ul style="margin-left: 0;">
+						<li>关注我们</li>
+						<li style="margin-top: 30px;">新浪微博</li>
+						<li>小米部落</li>
+						<li>官方微信</li>
+					</ul>
+					<ul>
+						<li>关注我们</li>
+						<li style="margin-top: 30px;">新浪微博</li>
+						<li>小米部落</li>
+						<li>官方微信</li>
+					</ul>
+					<ul>
+						<li>关注我们</li>
+						<li style="margin-top: 30px;">新浪微博</li>
+						<li>小米部落</li>
+						<li>官方微信</li>
+					</ul>
+					<ul>
+						<li>关注我们</li>
+						<li style="margin-top: 30px;">新浪微博</li>
+						<li>小米部落</li>
+						<li>官方微信</li>
+					</ul>
+					<ul>
+						<li>关注我们</li>
+						<li style="margin-top: 30px;">新浪微博</li>
+						<li>小米部落</li>
+						<li>官方微信</li>
+					</ul>
+					<ul>
+						<li>关注我们</li>
+						<li style="margin-top: 30px;">新浪微博</li>
+						<li>小米部落</li>
+						<li>官方微信</li>
+					</ul>
+				</div>
+				<div class="b5">
+					<p>小米客服</p>
+					<p>7*24小时全天陪伴</p>
+					<p>为您解决问题</p>
+					<p>立即开始咨询</p>
+				</div>
+			</div>
+		</div>
+		<div class="zuihou">
+			<div>
+				<img src="img/dm.jpg" />
+				<div>
+					<ul>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 </li>
+					</ul>
+					<ul>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 </li>
+					</ul>
+					<ul>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 | </li>
+						<li>小米商城 </li>
+					</ul>
+				</div>
+				
+				<img src="img/18.jpg"/>
+			</div>
+			<div class="fs">
+				<h3>探索黑科技，小米为发烧而生</h3>
+			</div>
+		</div>
+	
+	</body>
+</html>
